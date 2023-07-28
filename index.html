@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Expense Manager</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="./index.js" defer></script>
+</head>
+<body>
+  <!-- The main container -->
+  <div class="container">
+    <div class="box">
+      <!-- Box header section -->
+      <section class="box_header">
+        <div id="exp"><h1>Expense Manager</h1>
+       
+        </div>
+        
+        <!-- Balance section showing the net amount -->
+        <div class="balance">
+          <h2 id="netAmount">₹0</h2>
+          <h3>Your Current Balance</h3>
+        </div>
+      </section>
+
+     <!-- Transaction history section -->
+<div class="transaction_history">
+  <h3>Transaction History</h3>
+  <!-- Add the sorting drop-down menu -->
+  <label for="sortOption">Sort By:</label>
+  <select id="sortOption">
+    <option value="date">Date</option>
+    <option value="amount">Amount</option>
+    <option value="type">Type</option>
+  </select>
+  <hr />
+
+  <!-- Section to display individual transactions -->
+  <div class="transactions">
+    <!-- Transaction elements will be dynamically inserted here -->
+  </div>
+</div>
+
+
+      <!-- Transaction form section -->
+      <section class="transaction_form">
+        <h3>Add a New Transaction</h3>
+        <form id="expenseForm">
+          <!-- Input fields for transaction details -->
+          <div class="inputs">
+            <div class="form_control">
+              <label for="transactionText">Description</label>
+              <input
+                placeholder="Enter Description"
+                type="text"
+                name="transactionText"
+                id="transactionText"
+              />
+            </div>
+            <div class="form_control">
+              <label for="transactionAmount">Amount</label>
+              <input
+                placeholder="Enter Amount"
+                type="number"
+                name="transactionAmount"
+                id="transactionAmount"
+              />
+            </div>
+          </div>
+          
+
+          <!-- Buttons to add earnings and expenses -->
+          <div class="buttons_container">
+            <button type="submit" id="addEarnBtn">
+              <p id="earning">₹0</p>
+              <p>Add Earnings</p>
+            </button>
+            <button type="submit" id="addExpenseBtn">
+              <p id="expense">₹0</p>
+              <p>Add Expense</p>
+            </button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </div>
+</body>
+</html>

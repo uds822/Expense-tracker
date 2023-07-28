@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+:root {
+  --primary: #3a3a3a;
+  --primary-dark: #302d2d;
+  --green: #008104;
+  --red: #ff0000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: rgb(6, 6, 56);
+}
+
+.container {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.box {
+  background-color: white;
+  width: 500px;
+  height: 750px;
+  padding: 20px;
+  background-color: rgb(70, 70, 163);
+  color: white;
+  position: absolute;
+}
+p {
+  font-size: 14px;
+}
+#exp{
+  text-align: center;
+  background-color:rgb(185, 168, 168);
+}
+h1 {
+  color: rgb(6, 6, 106);
+  font-weight: 500;
+  font-size: 32px;
+}
+h2 {
+  font-weight: 400;
+  font-size: 24px;
+}
+h3 {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.box_upper,
+.balance {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.balance {
+  margin-top: 20px;
+}
+
+.transaction_container {
+  margin-top: 20px;
+}
+
+.transactions {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.transaction {
+  background-color: rgb(247, 247, 247);
+  color: black;
+  display: flex;
+  flex-direction: column;
+}
+.transaction .left {
+  padding: 7px;
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content {
+  display: flex;
+}
+.lower {
+  padding: 10px;
+  gap: 10px;
+  display: none;
+}
+.lower img {
+  height: 20px;
+}
+.showTransaction {
+  display: flex;
+}
+.status {
+  display: grid;
+  place-items: center;
+  color: rgb(241, 229, 229);
+  min-height: 40px;
+  min-width: 40px;
+}
+.credit {
+  background-color: var(--green);
+}
+.debit {
+  background-color: var(--red);
+}
+
+.transaction_form {
+  background-color: rgb(185, 168, 168);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: black;
+  padding: 20px;
+}
+.transaction_form h3 {
+  margin-bottom: 10px;
+}
+
+.form_control {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.form_control:first-child {
+  flex: 2;
+}
+.inputs {
+  display: flex;
+  gap: 10px;
+}
+form input {
+  padding: 10px 15px;
+  outline: 1px solid transparent;
+  border: 1px solid black;
+  width: 100%;
+}
+form input:focus-visible {
+  outline: 1px solid var(--primary-dark);
+  border: 1px solid var(--primary-dark);
+}
+
+.buttons_container {
+  display: flex;
+  margin-top: 10px;
+}
+.buttons_container button {
+  width: 100%;
+  height: 45px;
+  color: rgb(239, 236, 236);
+  border: none;
+  opacity: 0.9;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+.buttons_container button:hover {
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+}
+
+#addEarnBtn {
+  background-color: var(--green);
+}
+#addExpenseBtn {
+  background-color: var(--red);
+}
+/* Add the following CSS styles to your existing CSS file or style tag */
+
+/* Styling for the transaction history section */
+.transaction_history {
+  margin-top: 20px;
+}
+
+.transaction_history h3 {
+  font-weight: 400;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Styling for the sorting drop-down menu */
+label {
+  font-weight: 400;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+#sortOption {
+  padding: 5px 10px;
+  font-size: 16px;
+  border: 1px solid var(--primary);
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Styling for individual transactions */
+.transaction {
+  background-color: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.transaction .left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Styling for the credit and debit status indicators */
+.status {
+  display: grid;
+  place-items: center;
+  color: white;
+  min-height: 40px;
+  min-width: 40px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.credit {
+  background-color: var(--green);
+}
+
+.debit {
+  background-color: var(--red);
+}
+
+/* Styling for the edit and delete icons */
+.lower {
+  padding: 10px;
+  gap: 10px;
+  display: none;
+}
+
+.lower img {
+  height: 20px;
+  cursor: pointer;
+}
+
+.showTransaction {
+  display: flex;
+}
+
+/* Media query for mobile responsiveness */
+
+@media (max-width: 500px) {
+  .box {
+    width: 95%;
+  }
+}
